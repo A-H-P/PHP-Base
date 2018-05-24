@@ -104,3 +104,9 @@ for ($i = 0; $i < 6; $i++){ // Affiche chaque ligne
     $size += 2 ; // On augmente le nombre d'étoiles pleines à afficher entre chaque ligne.
     echo '<br />';
 }
+echo '<br />';
+echo "<h1>6. Tables de multiplication</h1>";
+
+for ($i = 0; $i <= 11; $i++){
+    for($j = 0; $j <11)
+}
