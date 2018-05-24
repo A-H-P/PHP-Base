@@ -19,4 +19,4 @@ if ($age >= 18) {
 
 
 // BONUS
-echo $age >= 18 ? 'Vous pouvez entrez' : ($age >= 16) ? 'Vous êtes presque majeur' : (($age >= 14) ? 'Vous êtes jeune' : 'Vous êtes trop jeune');
+echo $age >= 18 ? 'Vous pouvez entrer' : ($age >= 16) ? 'Vous êtes presque majeur' : (($age >= 14) ? 'Vous êtes jeune' : 'Vous êtes trop jeune');
