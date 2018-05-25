@@ -104,11 +104,22 @@ for ($i = 0; $i < 6; $i++){ // Affiche chaque ligne
     $size += 2 ; // On augmente le nombre d'étoiles pleines à afficher entre chaque ligne.
     echo '<br />';
 }
-echo '<br />';
+
+
 echo "<h1>6. Tables de multiplication</h1>";
 
-for ($i = 0; $i <= 10; $i++){
-    for($j = 0; $j <= 10){
-        
+    echo '<table border="1" style="border-collapse: collapse">';
+    echo '<thead><tr>';
+    echo '<th style="width: 30px; height: 30px">x</th>';
+    for ($head = 0; $head < 11; $head++) {
+        echo '<th style="width: 30px; height: 30px">' . $head . '</th>';
     }
-}
+    echo '</tr></thead>'
+    for($i = 0; $i < 11; $i++){
+        echo '<tr>';
+        for($j = 0; $j < 11; $j++){
+            echo '<td align="center" style="width: 30px; height: 30px"> ' . $i * $j . '</td>';
+        }
+        echo '</tr>';
+    }
+    echo '</table>';
