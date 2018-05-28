@@ -2,13 +2,8 @@
 
 $eleves = [
     0 => [
-<<<<<<< HEAD
         'nom' => 'Adri',
         'notes' => [18, 19, 18, 20, 17, 16, 15, 20]
-=======
-        'nom' => 'Matthieu',
-        'notes' => [20, 8, 16, 12, 17, 16, 15, 2]
->>>>>>> upstream/master
     ],
     1 => [
         'nom' => 'Thomas',
@@ -19,13 +14,8 @@ $eleves = [
         'notes' => [20, 20, 20, 20, 20, 20, 20]
     ],
     3 => [
-<<<<<<< HEAD
         'nom' => 'Kendji',
         'notes' => [10, 8, 8, 0, 9, 6, 1, 2]
-=======
-        'nom' => 'Enzo',
-        'notes' => [9, 14, 6, 10, 1, 8, 2]
->>>>>>> upstream/master
     ]
 
 ];
@@ -100,12 +90,6 @@ foreach ($eleves as $eleve) {
     }
 }
 
-<<<<<<< HEAD
-/*Qui a eu au moins un 20?
-Personne n'a eu 20
-quelqu'un a eu 20*/
-?>
-=======
 /* 5/ Qui a eu au moins un 20 ?
 Exemple: Personne n'a eu 20
          Quelqu'un a eu 20 */
@@ -147,4 +131,3 @@ while ($i < $count) { // On parcours tout le tableau
     }
 }
 var_dump($notes);
->>>>>>> upstream/master
