@@ -3,7 +3,7 @@
 $age = 17;
 
 if ($age >= 18) {
-    echo 'Vous pouvez entrez';
+    echo 'Vous pouvez entrer';
 } else if ($age >= 16 && $age < 18) {
     echo 'Vous êtes presque majeur';
 } else if ($age >= 14 && $age < 16) {

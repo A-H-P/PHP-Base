@@ -93,4 +93,21 @@ foreach ($eleves as $eleve) {
 /*Qui a eu au moins un 20?
 Personne n'a eu 20
 quelqu'un a eu 20*/
+
+$noteToCheck = 20;
+$noteIsCheck = false;
+foreach ($eleves as $eleve) {
+    foreach ($eleve['notes'] as $note) {
+        if ($note === $noteToCheck) {
+            $noteIsCheck = true;
+            break 2; // Arrête les foreach
+        } 
+    }
+    var_dump($eleve);
+    }
+if ($noteIsCheck) {
+    echo 'Quelqu\'un a eu 20';
+} else {
+    echo 'Personne n\'a eu 20';
+}
 ?>
