@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 // mysql, host localhost, dbname movie_catalog, user root, pass ''
 
