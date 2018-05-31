@@ -1,0 +1,56 @@
+.navbar {
+    background-color: rgba(197,83,148,1);
+}
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)");
+}
+
+.navbar-dark .navbar-toggler {
+    color: rgba(255,255,255,1);
+    border-color: rgba(255, 255, 255,1)
+}
+a.navbar-brand{
+    font-family: Courgette, cursive;
+}
+h1{
+    padding-top: 40px;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+h2{
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+h3{
+    font-size: 1.2rem;
+}
+h1, h2, h3 {
+    font-family: Courgette, cursive;
+    color: rgb(197, 83, 148);
+}
+
+main {
+    background-image: url('../img/rainbow.png'), url('../img/background.png');
+    background-repeat: no-repeat, repeat;
+    background-position: center top, center;
+}
+
+label {
+    font-weight: bold;
+}
+
+footer {
+    background-color: rgb(197,83,148);
+}
+
+footer p {
+    color: white;
+    margin-bottom:0;
+}
+.errormsg{
+    border:1px solid red;
+}
+
+.valid{
+    border:1px solid lightgreen;
+}
