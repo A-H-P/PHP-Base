@@ -1,8 +1,8 @@
--- MySQL dump 10.16  Distrib 10.1.26-MariaDB, for Win32 (AMD64)
+-- MySQL dump 10.13  Distrib 5.7.17, for macos10.12 (x86_64)
 --
 -- Host: localhost    Database: beer_pdo
 -- ------------------------------------------------------
--- Server version	10.1.26-MariaDB
+-- Server version	5.7.22
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -25,17 +25,17 @@ DROP TABLE IF EXISTS `beer`;
 CREATE TABLE `beer` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL,
-  `degree` float(3,2) DEFAULT NULL,
-  `volume` decimal(1,0) DEFAULT NULL,
+  `degree` float(3,1) DEFAULT NULL,
+  `volum` int(11) DEFAULT NULL,
   `image` varchar(255) DEFAULT NULL,
   `price` float(8,2) DEFAULT NULL,
-  `brand_id` int(11) NOT NULL,
   `ebc_id` int(11) NOT NULL,
+  `brand_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `fk_beer_brand_idx` (`brand_id`),
-  KEY `fk_beer_ebc1_idx` (`ebc_id`),
-  CONSTRAINT `fk_beer_brand` FOREIGN KEY (`brand_id`) REFERENCES `brand` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_beer_ebc1` FOREIGN KEY (`ebc_id`) REFERENCES `ebc` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  KEY `fk_beer_ebc_idx` (`ebc_id`),
+  KEY `fk_beer_brand1_idx` (`brand_id`),
+  CONSTRAINT `fk_beer_brand1` FOREIGN KEY (`brand_id`) REFERENCES `brand` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_beer_ebc` FOREIGN KEY (`ebc_id`) REFERENCES `ebc` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -99,15 +99,15 @@ LOCK TABLES `brewery` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `brewery_has_brand`
+-- Table structure for table `brewery_made_brand`
 --
 
-DROP TABLE IF EXISTS `brewery_has_brand`;
+DROP TABLE IF EXISTS `brewery_made_brand`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `brewery_has_brand` (
-  `brewery_id` int(11) DEFAULT NULL,
-  `brand_id` int(11) DEFAULT NULL,
+CREATE TABLE `brewery_made_brand` (
+  `brewery_id` int(11) NOT NULL,
+  `brand_id` int(11) NOT NULL,
   KEY `fk_brewery_has_brand_brand1_idx` (`brand_id`),
   KEY `fk_brewery_has_brand_brewery1_idx` (`brewery_id`),
   CONSTRAINT `fk_brewery_has_brand_brand1` FOREIGN KEY (`brand_id`) REFERENCES `brand` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
@@ -116,12 +116,12 @@ CREATE TABLE `brewery_has_brand` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `brewery_has_brand`
+-- Dumping data for table `brewery_made_brand`
 --
 
-LOCK TABLES `brewery_has_brand` WRITE;
-/*!40000 ALTER TABLE `brewery_has_brand` DISABLE KEYS */;
-/*!40000 ALTER TABLE `brewery_has_brand` ENABLE KEYS */;
+LOCK TABLES `brewery_made_brand` WRITE;
+/*!40000 ALTER TABLE `brewery_made_brand` DISABLE KEYS */;
+/*!40000 ALTER TABLE `brewery_made_brand` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -135,7 +135,6 @@ CREATE TABLE `ebc` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `code` int(11) DEFAULT NULL,
   `color` varchar(6) DEFAULT NULL,
-  `ebccol` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -185,4 +184,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-05-31 10:20:30
+-- Dump completed on 2018-05-31 10:27:07
