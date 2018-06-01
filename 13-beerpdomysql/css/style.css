@@ -1,11 +1,12 @@
-<<<<<<< HEAD
-.beer-img {
-    width: 150px;
-    height: 150px;
-}
-=======
 .beer-img {
     width: 120px;
     height: 120px;
 }
->>>>>>> upstream/master
+
+.logo {
+    width: 50px;
+}
+
+.box-shadow {
+    box-shadow: 0 2px 4px
+}
