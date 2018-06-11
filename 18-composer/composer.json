@@ -1,0 +1,12 @@
+{
+    "name": "webforce/composer",
+    "authors": [
+        {
+            "name": "A-H-P",
+            "email": "adrien.perot@live.fr"
+        }
+    ],
+    "require": {
+        "swiftmailer/swiftmailer": "^6.0"
+    }
+}
