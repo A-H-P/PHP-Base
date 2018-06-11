@@ -72,8 +72,4 @@ function isValidToken($token, $id) {
     if ($token == hash('sha256', $user['id'].$user['password'].$user['created_at'])) {
         return true;
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> upstream/master
