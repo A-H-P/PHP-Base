@@ -68,8 +68,3 @@ foreach($people as $person) {
         echo $person['prenom'] . ' ' . $person['nom'] . ' est né le ' . $person['date'] . ', il a 75 ans. ' . 'Il habite à ' . $person['ville'] . ' ' . '('. $person['zip'] . ').' . ' Il est joignable au ' . $person['phone'] ;
         echo '<br/>'; 
     }
-
-    //Pour convertir en degrés Celsius une température donnée en degrés Fahrenheit, il suffit de soustraire 32 et de diviser par 1,8 (9/5 = 1,8) le nombre ainsi obtenu.
-function CelFahr($fahr, $cel) {
-    
-}
